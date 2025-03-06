@@ -16,6 +16,8 @@ export default defineConfig({
 		}),
 	],
 	server: {
+		port: 5175,
+		strictPort: true,
 		origin: 'http://localhost:5175',
 	},
 	// Do you need to support build targets lower than chrome89?

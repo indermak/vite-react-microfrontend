@@ -15,7 +15,12 @@ export default defineConfig({
 			shared: ['react', 'react-dom', 'react-router-dom'],
 		}),
 	],
-	server: { origin: 'http://localhost:5174', fs: { allow: ['.', '../shared'] } },
+	server: {
+		port: 5174,
+		strictPort: true,
+		origin: 'http://localhost:5174',
+		fs: { allow: ['.', '../shared'] },
+	},
 	build: {
 		target: 'chrome89',
 	},

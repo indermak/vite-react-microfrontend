@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	server: { origin: 'http://localhost:5173', fs: { allow: ['.', '../shared'] } },
+	server: { port: 5173, strictPort: true, origin: 'http://localhost:5173', fs: { allow: ['.', '../shared'] } },
 	plugins: [
 		[react()],
 		federation({

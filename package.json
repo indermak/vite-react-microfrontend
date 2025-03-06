@@ -12,9 +12,9 @@
 		"prepare": "husky install"
 	},
 	"author": {
-		"name": "Giorgio Boa",
-		"email": "giorgiob.boa@gmail.com",
-		"url": "https://github.com/gioboa"
+		"name": "Inderjeet Singh",
+		"email": "i.mak1992gmail.com",
+		"url": "https://github.com/indermak"
 	},
 	"license": "ISC",
 	"devDependencies": {
