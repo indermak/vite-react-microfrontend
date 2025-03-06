@@ -1,9 +1,16 @@
 import { federation } from '@module-federation/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import { configDefaults } from 'vitest/config';
 
 export default defineConfig({
 	server: { port: 5173, strictPort: true, origin: 'http://localhost:5173', fs: { allow: ['.', '../shared'] } },
+	test: {
+		globals: true,
+		environment: 'jsdom',
+		setupFiles: './src/setupTests.ts',
+		exclude: [...configDefaults.exclude, 'e2e/**'],
+	},
 	plugins: [
 		[react()],
 		federation({
